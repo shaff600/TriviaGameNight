@@ -1,11 +1,3 @@
-/* @font-face {
-	font-family: TarrgetRegular-WEOz;
-    src: url('../fonts/TarrgetRegular-WEOz.otf');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-} */
-
 @font-face {
     font-family: RapierZero-325M;
     src: url('../fonts/RapierZero-325M.ttf') format("opentype");
@@ -61,31 +53,12 @@ body {
   font-size: 1rem;
 }
 
-h1 {
-  font-weight: 400;
-  text-align: center;
-  text-transform: uppercase;
-}
 .background {
   background: url("https://s15.postimg.org/h9f6i4bd7/Rose.jpg");
   border: 2px solid black;
   background-size:cover;
 }
-
-.transbox {
-  margin-bottom: 100px;
-  background-color: #ffffff;
-  border: 2px solid #800080;
-  opacity: 0.1;
-  }
-
-.transbox p {
-  margin: 2%;
-  font-size: 28px;
-  text-align: center;
-  font-weight: bold;
-  color: #ffffff;
-}
+/* transparent box background */
 .card{
     width: 60%;
     box-sizing: 0px 0px 1px #ccc;
@@ -99,4 +72,35 @@ h1 {
     padding: 20px;
     opacity: 0.8;
     border-radius: 10px;  
+    right: 100%;
 }
+.difficulty{
+right: -30%;
+font-size: 2rem;
+}
+.difficulty > a{
+font-size: 0.7rem;
+}
+.category{
+    right: -30%;
+}
+.category > a{
+    font-size: 0.7rem;
+}
+.num-questions{
+right: -30%;
+margin-top: 20px;
+}
+.num-questions > a{
+font-size: 0.7rem;
+}
+.btn-primary{
+margin-top: 20px;
+align-items: center;
+font-size: 0.7rem;
+}
+.dropdown-item{
+font-size: 0.7rem;
+ width: 100%;
+}
+
