@@ -1,0 +1,102 @@
+/* @font-face {
+	font-family: TarrgetRegular-WEOz;
+    src: url('../fonts/TarrgetRegular-WEOz.otf');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+} */
+
+@font-face {
+    font-family: RapierZero-325M;
+    src: url('../fonts/RapierZero-325M.ttf') format("opentype");
+}
+
+
+
+body{
+    background-color: black;
+ background-image: url(../images/background.svg);
+}
+
+
+.neon {
+  color: #fff;
+  text-shadow:
+    0 0 5px #800080,
+    0 0 10px #800080,
+    0 0 20px #800080,
+    0 0 70px #800080,
+    0 0 8px #800080,
+    0 0 9px #800080,
+    0 0 10px #800080,
+    0 0 150px #800080;
+    margin-bottom: 70px;
+    position: relative;
+    margin: 0;
+    transform: translateY(-70px);
+    font-family: RapierZero-325M;
+}
+
+/* general styling */
+:root {
+  font-size: calc(1vw + 1vh + 1.5vmin);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+body {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1rem;
+}
+
+h1 {
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+}
+.background {
+  background: url("https://s15.postimg.org/h9f6i4bd7/Rose.jpg");
+  border: 2px solid black;
+  background-size:cover;
+}
+
+.transbox {
+  margin-bottom: 100px;
+  background-color: #ffffff;
+  border: 2px solid #800080;
+  opacity: 0.1;
+  }
+
+.transbox p {
+  margin: 2%;
+  font-size: 28px;
+  text-align: center;
+  font-weight: bold;
+  color: #ffffff;
+}
+.card{
+    width: 60%;
+    box-sizing: 0px 0px 1px #ccc;
+    position: relative;
+    margin: 0px auto;
+    opacity: 0.2;
+}
+.box{
+    width: 75%;
+    height: 500px;
+    padding: 20px;
+    opacity: 0.8;
+    border-radius: 10px;  
+}
