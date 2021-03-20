@@ -6,8 +6,9 @@
 
 
 body{
-    background-color: black;
- background-image: url(../images/background.svg);
+background-color: black;
+background-image: url(../images/background.svg);
+height: 100vh;
 }
 
 
@@ -64,43 +65,134 @@ body {
     box-sizing: 0px 0px 1px #ccc;
     position: relative;
     margin: 0px auto;
-    opacity: 0.2;
+    opacity: 1;
+    background-color: black;
 }
 .box{
     width: 75%;
     height: 500px;
     padding: 20px;
-    opacity: 0.8;
+    /* opacity: 0.8; */
     border-radius: 10px;  
     right: 100%;
 }
 .difficulty{
 right: -30%;
 font-size: 2rem;
+color: #ffffff;
+ margin-top: -15px;
+ width: 100%;
 }
 .difficulty > a{
 font-size: 0.7rem;
 }
 .category{
     right: -30%;
+    margin-top: 10px;
 }
 .category > a{
     font-size: 0.7rem;
 }
 .num-questions{
 right: -30%;
-margin-top: 20px;
+  margin-top: 10px;
+
 }
 .num-questions > a{
 font-size: 0.7rem;
 }
 .btn-primary{
-margin-top: 20px;
-align-items: center;
-font-size: 0.7rem;
+margin-left: 11px;
+margin-top: 30px;
+left: 100px;
 }
 .dropdown-item{
 font-size: 0.7rem;
  width: 100%;
 }
+/* mobile devices */
+@media (max-width: 414px){
+.neon {
+  color: #fff;
+  text-shadow:
+    0 0 5px #800080,
+    0 0 10px #800080,
+    0 0 20px #800080,
+    0 0 70px #800080,
+    0 0 8px #800080,
+    0 0 9px #800080,
+    0 0 10px #800080,
+    0 0 150px #800080;
+    margin-bottom: 70px;
+    position: relative;
+    margin: 0;
+    transform: translateY(-130px);
 
+    font-family: RapierZero-325M;
+    text-align: center;
+}
+.card{
+    width: 80%;
+    box-sizing: 0px 0px 1px #ccc;
+    position: relative;
+    margin: 0px auto;
+    opacity: 1;
+    background-color: black;
+    color: #ffffff;
+}
+.box{
+    width: 75%;
+    height: 200px;
+    padding: 20px;
+    opacity: 0.8;
+    border-radius: 10px;  
+    right: 100%;
+}
+}
+/* ipad  */
+@media (max-width: 1024px){
+    .neon {
+  color: #fff;
+  text-shadow:
+    0 0 5px #800080,
+    0 0 10px #800080,
+    0 0 20px #800080,
+    0 0 70px #800080,
+    0 0 8px #800080,
+    0 0 9px #800080,
+    0 0 10px #800080,
+    0 0 150px #800080;
+    margin-bottom: 70px;
+    position: relative;
+    margin: 0;
+    transform: translateY(-130px);
+    font-family: RapierZero-325M;
+    text-align: center;
+}
+.card{
+    width: 80%;
+    box-sizing: 0px 0px 1px #ccc;
+    position: relative;
+    margin: 0px auto;
+    opacity: 1;
+    background-color: black;
+    color: #ffffff;
+}
+.box{
+    width: 75%;
+    height: 220px;
+    padding: 20px;
+    opacity: 0.8;
+    border-radius: 10px;  
+    right: 100%;
+}
+.category{
+    margin-bottom: 10px;
+}
+.btn-primary{
+margin-top: 20px;
+align-items: center;
+font-size: 0.7rem;
+
+}
+}
