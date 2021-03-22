@@ -117,6 +117,9 @@ body {
     font-size: 0.7rem;
     width: 100%;
 }
+.custom-select {
+    height: 50px;
+}
 
 /* mobile devices */
 @media (max-width: 414px) {
