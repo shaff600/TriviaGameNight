@@ -15,6 +15,14 @@ h2{
     color: #ffffff;
     text-align: center;
 }
+.hide {
+	display: none;
+}
+.gamescreen{
+    color: #ffffff;
+     font-family: 'Ubuntu Condensed', sans-serif;
+}
+
 .neon {
     color: #fff;
     text-shadow:
@@ -29,7 +37,8 @@ h2{
     margin-bottom: 70px;
     position: relative;
     margin: 0;
-    transform: translateY(-70px);
+    text-align: center;
+    transform: translateY(-20px);
     font-family: RapierZero-325M;
 }
 
@@ -251,7 +260,7 @@ body {
             0 0 150px #800080;
         margin-bottom: 70px;
         position: relative;
-        margin: 0;
+        left: 50%;
         transform: translateY(-60px);
         font-family: RapierZero-325M;
         text-align: center;

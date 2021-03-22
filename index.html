@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <title>Trivia Night</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,60 +10,79 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css" />
-</head>
-
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h1 class="neon">Trivia Game Night</h1>
-         <div class="card">
-            <div class="box">
-                <div class="content">
-        <!--Select Quiz Options-->
-        <section class="container" id="selectGameOptions">
-            <div class="row">
+      <h1 class="neon">Trivia Game Night</h1>
+      <div class="card">
+        <div class="box">
+          <div class="content">
+            <!--Select Quiz Options-->
+            <section class="container" id="gameOptions">
+              <div class="row">
                 <div class="col-sm-12 col-md-12 dropdownSelect">
-                    <h2>Select Category</h2>
-                    <select class="custom-select" id="categorySelect"></select>
+                  <h2>Select Category</h2>
+                  <select class="custom-select" id="category"></select>
                 </div>
                 <div class="col-sm-12 col-md-12 dropdownSelect">
-                    <h2>Select Difficulty</h2>
-                    <select class="custom-select" id="difficultySelect">
-                        <option value="easy">Easy</option>
-                        <option value="medium">Medium</option>
-                        <option value="hard">Hard</option>
-                    </select>
+                  <h2>Select Difficulty</h2>
+                  <select class="custom-select" id="difficultySelect">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                  </select>
                 </div>
                 <div class="col-sm-12 col-md-12 dropdownSelect">
-                    <h2>How Many Questions?</h2>
-                    <select class="custom-select" id="quantChoice">
-                        <option value="5">5</option>
-                        <option value="10">10</option>
-                        <option value="15">15</option>
-                    </select>
+                  <h2>How Many Questions?</h2>
+                  <select class="custom-select" id="quantityQuestion">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                  </select>
+                  <button type="button" class="btn btn-primary" id="submitOptions">Start Quiz!</button>
                 </div>
-            </div>
-        </section>
-    </div>
-            </div>  
-         </div>
-    </div>
+              </div>
+            </section>
+<section class="container d-none" id="game">
+      <div class="row gamescreen">
+        <div id="question"></div>
+        <div class="col-sm-12 col-md-6 answer-options">
+          <p class="answerNum">1</p>
+          <p class="answerChoice" data-number="1"></p>
+        </div>
+        <div class="col-sm-12 col-md-6 answer-options">
+          <p class="answerNum">2</p>
+          <p class="answerChoice" data-number="2"></p>
+        </div>
+        <div class="col-sm-12 col-md-6 answer-options">
+          <p class="answerNum">3</p>
+          <p class="answerChoice" data-number="3"></p>
+        </div>
+        <div class="col-sm-12 col-md-6 answer-options">
+          <p class="answerNum">4</p>
+          <p class="answerChoice" data-number="4"></p>
+        </div>
+      </div>
+      <div class="col">
+        <button class="btn" id="quitGame">Quit Game</button>
+      </div>
+    </section>
 
-    <button type="button" class="btn btn-primary">Start Quiz!</button>
 
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
     <footer>
-
     </footer>
-
-</body>
-
+  </body>
 </html>
