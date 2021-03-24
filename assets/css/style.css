@@ -40,6 +40,7 @@ h2{
     text-align: center;
     transform: translateY(-20px);
     font-family: RapierZero-325M;
+    width: 100%;
 }
 
 /* general styling */
@@ -93,13 +94,11 @@ body {
 }
 
 .btn-primary {
-    margin-left: 11px;
-    margin-top: 30px;
+    margin-left: 200px;
+    margin-top: 80px;
     right: 490px;
     background-color: #800080;
     border-color: #ffffff;
-    position: absolute;
-    top: 85%;
     width: 49%;
     box-shadow:
         0 0 0px #800080,
@@ -131,7 +130,7 @@ body {
 }
 
 /* mobile devices */
-@media (max-width: 414px) {
+@media only screen and (max-width: 768px)  {
     .neon {
         color: #fff;
         text-shadow:
@@ -143,10 +142,9 @@ body {
             0 0 9px #800080,
             0 0 10px #800080,
             0 0 150px #800080;
-        margin-bottom: 70px;
         position: relative;
         margin: 0;
-        transform: translateY(-130px);
+        transform: translateY(-50px);
 
         font-family: RapierZero-325M;
         text-align: center;
@@ -169,20 +167,16 @@ body {
         opacity: 0.8;
 
     }
-    .difficulty>a{
-    width: 100%;
-    }
-    .category>a {
-    width: 100%;
-    }
-    .num-questions>a {
-    width: 100%;
-}
+    
     .btn-primary{
-    left: 17%;
-    top: 68%;
-    width: 60%;
+   margin-left: 0px;
+   margin-top: 3rem;
+   width: 13rem;
     }
+    .custom-select {
+    height: 2rem;
+    width: 13rem;
+}
 }
 
 /* ipad  */

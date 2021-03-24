@@ -10,22 +10,6 @@ const submitQuiz = document.getElementById("submitOptions");
 
 
 
-// function hideMenu() {
-//   if (submitQuiz.style.display === "none") {
-//     submitQuiz.style.display = "block";
-//   } else {
-//     submitQuiz.style.display = "none";
-//   }
-// }
-
-// submitQuiz.addEventListener('click', () =>{
-
-//     if(quizSelectOpt.style.display === 'none'){
-//         quizSelectOpt.style.display = 'block';
-//     }else{
-//         quizSelectOpt.style.display === 'none'
-//     }
-// })
 
 submitQuiz.addEventListener("click", function(){
   quizSelectOpt.classList.add("d-none");
