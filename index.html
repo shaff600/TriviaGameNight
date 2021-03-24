@@ -14,9 +14,10 @@
   <body>
     <div class="container">
       <h1 class="neon">Trivia Game Night</h1>
-      <div class="card">
+      <div class="card"  id="remove"> 
         <div class="box">
           <div class="content">
+            
             <!--Select Quiz Options-->
             <section class="container" id="gameOptions">
               <div class="row">
@@ -39,11 +40,17 @@
                     <option value="10">10</option>
                     <option value="15">15</option>
                   </select>
-                  <button type="button" class="btn btn-primary" id="submitOptions">Start Quiz!</button>
+                  <button type="button" class="btn btn-primary start" id="submitOptions">Start Quiz!</button>
                 </div>
               </div>
+            
             </section>
+          </div>
+        </div>
+      </div>
 <section class="container d-none" id="game">
+    <div class="card2"> 
+    <div class="box2"> 
       <div class="row gamescreen">
         <div id="question"></div>
         <div class="col-sm-12 col-md-6 answer-options">
@@ -64,15 +71,16 @@
         </div>
       </div>
       <div class="col">
-        <button class="btn" id="quitGame">Quit Game</button>
+        <button class="btn btn-primary" id="quitGame">Quit Game</button>
+      </div>
+      </div>
       </div>
     </section>
 
 
-          </div>
-        </div>
-      </div>
+         
       
+    
     </div>
     
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

@@ -6,6 +6,7 @@ const categoryOpt = document.getElementById("categorySelect");
 const difficultyOpt = document.getElementById("difficultySelect");
 const questionAmount = document.getElementById("quantityQuestion");
 const submitQuiz = document.getElementById("submitOptions");
+const remove = document.getElementById("remove");
 
 
 
@@ -13,7 +14,9 @@ const submitQuiz = document.getElementById("submitOptions");
 
 submitQuiz.addEventListener("click", function(){
   quizSelectOpt.classList.add("d-none");
+  remove.classList.add("d-none")
   game.classList.remove("d-none")
+  document.getElementById("remove").style.display = "none";
 })
 
 
