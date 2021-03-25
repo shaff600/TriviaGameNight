@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <div class="container">
+    <div class="container col-sm-12">
       <h1 class="neon">Trivia Game Night</h1>
       <div class="card"  id="remove"> 
         <div class="box">
@@ -33,14 +33,16 @@
                     <option value="hard">Hard</option>
                   </select>
                 </div>
-                <div class="col-sm-12 col-md-12 dropdownSelect">
+                <div class="col-sm-12 col-md-12 col-xl-12 dropdownSelect">
                   <h2>How Many Questions?</h2>
                   <select class="custom-select" id="quantityQuestion">
                     <option value="5">5</option>
                     <option value="10">10</option>
                     <option value="15">15</option>
                   </select>
-                  <button type="button" class="btn btn-primary start" id="submitOptions">Start Quiz!</button>
+                  <div class="col-sm-12">
+                  <button type="button" class="btn btn-primary btn-block" id="submitOptions">Start Quiz!</button>
+                   </div>
                 </div>
               </div>
             
@@ -70,8 +72,8 @@
           <p class="answerChoice" data-number="4"></p>
         </div>
       </div>
-      <div class="col">
-        <button class="btn btn-primary" id="quitGame">Quit Game</button>
+      <div class="col-sm-12 ">
+        <button class="btn btn-primary btn-block" id="quitGame">Quit Game</button>
       </div>
       </div>
       </div>
