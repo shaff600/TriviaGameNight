@@ -2,13 +2,15 @@
 //current score variable - empty array
 //available questions -empty array
 const quizSelectOpt = document.getElementById("gameOptions");
-const categoryOpt = document.getElementById("categorySelect");
+const categoryOpt = document.getElementById("category");
 const difficultyOpt = document.getElementById("difficultySelect");
 const questionAmount = document.getElementById("quantityQuestion");
 const submitQuiz = document.getElementById("submitOptions");
 const remove = document.getElementById("remove");
 let api_link = "https://opentdb.com/";
-
+let quantity
+let difficulty
+let gameOption
 
 
 
@@ -18,14 +20,18 @@ submitQuiz.addEventListener("click", function(){
   remove.classList.add("d-none");
   game.classList.remove("d-none");
   document.getElementById("remove").style.display = "none";
+  gameOption = categoryOpt.value;
+  difficulty = difficultyOpt.value;
+  quantity = questionAmount.value;
+  
   getData()
  
 })
 
 //API request
 function getData(){
-// fetch(`${api_link}api.php?amount=${questionAmount}&category=${categoryOpt}&difficulty=${difficultyOpt}&type=multiple`)
-fetch("https://opentdb.com/api.php?amount=10&difficulty=easy&type=multiple")
+console.log(quantity)
+fetch(`${api_link}api.php?amount=${quantity}&category=${gameOption}&difficulty=${difficulty}&type=multiple`)
 .then(response => response.json())
 .then(data => console.log(data))
 }
