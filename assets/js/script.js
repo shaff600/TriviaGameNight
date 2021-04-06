@@ -11,6 +11,8 @@ let api_link = "https://opentdb.com/";
 let quantity
 let difficulty
 let gameOption
+let questions = []
+let formattedQuestion
 
 
 
@@ -24,8 +26,7 @@ submitQuiz.addEventListener("click", function(){
   difficulty = difficultyOpt.value;
   quantity = questionAmount.value;
   
-  getData()
- 
+  getData() 
 })
 
 //API request
@@ -33,7 +34,28 @@ function getData(){
 console.log(quantity)
 fetch(`${api_link}api.php?amount=${quantity}&category=${gameOption}&difficulty=${difficulty}&type=multiple`)
 .then(response => response.json())
-.then(data => console.log(data))
+.then(loadedQuestion => {
+console.log(loadedQuestion)
+questions = loadedQuestion.results.map(loadedQuestion =>{
+ formattedQuestion = {
+    question: loadedQuestion.question
+};
+const answerChoices = [... loadedQuestion.incorrect_answers]
+formattedQuestion.answer = Math.floor(Math.random() * 3) + 1;
+answerChoices.splice(formattedQuestion.answer -1,0,
+    loadedQuestion.correct_answer);
+    answerChoices.forEach((choice, index) => {
+    formattedQuestion["choice" + (index+1)] = choice;})
+    
+})  
+    return document.querySelector("#question").innerHTML = `Question: ${loadedQuestion.results[0].question}`
+
+;
+    
+})
+.catch(err => {
+console.error(err)
+})
 }
 // submitQuiz.addEventListener('click', getData)
 //collect questions from api 

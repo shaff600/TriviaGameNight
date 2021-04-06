@@ -18,7 +18,12 @@ h2 {
     filter: none;
 }
 
-
+#question{
+    color: #ffffff;
+    text-align: center;
+    background-color: red;
+    /* height: 5vw; */
+}
 .hide {
     display: none;
 }
@@ -131,7 +136,7 @@ body {
      overflow: hidden
 }
 .box2{
-    margin-top:10rem
+    /* margin-top:10rem */
 }
 .btn-primary {
     background-color: #800080;
