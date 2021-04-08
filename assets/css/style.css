@@ -17,6 +17,13 @@ h2 {
     text-align: center;
     filter: none;
 }
+.answer-options{
+    font-size: 3vh;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    padding: 1%;
+    color: #ffffff;
+    text-align: center;
+}
 
 #question{
     color: #ffffff;
@@ -85,7 +92,7 @@ body {
 /* transparent box background */
 .card {
     width: 70vw;
-    height: 70vh;
+    height: 50vh;
     box-sizing: 0px 0px 1px #ccc;
     position: relative;
     margin: 0px auto;
@@ -119,7 +126,7 @@ body {
     opacity: 1;
     background: inherit;
     overflow: hidden;
-    left: -10.5%;
+  
   }
 .card2::before{
     content: "";
@@ -240,11 +247,11 @@ body {
         align-content: center;
 
     }
-    .card2{
+    /* .card2{
          height: 200%;
          margin-bottom: -50%;
          left: 0%;
-    }
+    } */
 }
 
 /* ipad  */
@@ -339,5 +346,5 @@ body {
         width: 72%;
 
     }
-   
+    
 }
