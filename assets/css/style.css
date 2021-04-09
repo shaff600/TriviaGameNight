@@ -236,6 +236,13 @@ body {
         font-family: RapierZero-325M;
         text-align: center;
     }
+    .card2{
+        height: 90vh;
+    }
+    .answer-options{
+        height: 17vh;
+    }
+
 
 
 
@@ -310,6 +317,9 @@ body {
         font-size: 0.7rem;
         width: 62%;
 
+    }
+    .card2{
+        height: 50vh;
     }
 }
 
