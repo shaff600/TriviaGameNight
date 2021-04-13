@@ -6,6 +6,10 @@ const submitQuiz = document.getElementById("submitOptions");
 const remove = document.getElementById("remove");
 const options = document.querySelectorAll(".answer-options"); 
 const question = document.querySelector("#question"); 
+// let correctScore = document.getElementById("correct")
+// let incorrectScore = document.getElementById("incorrect")
+// let scores = document.getElementsByClassName("score-area")
+let scoreCard = document.getElementById("score-card")
 let api_link = "https://opentdb.com/";
 let quantity;
 let difficulty;
@@ -20,9 +24,10 @@ options.forEach(function (option) {
   option.addEventListener("click", checkAnswer);
 });
 
+
 submitQuiz.addEventListener("click", function () {
   quizSelectOpt.classList.add("d-none");
-  remove.classList.add("d-none");
+  remove.classList.add("d-none"); 
   game.classList.remove("d-none");
   document.getElementById("remove").style.display = "none";
   gameOption = categoryOpt.value;
@@ -87,11 +92,14 @@ function shuffle(array) {
 function checkAnswer() {
   if (this.innerHTML === loadedQuestions[count].correct_answer) {
     alert("correct");
+    incrementScore()
   } else {
-    alert("incorrect");
+    alert(`${this.innerHTML} was incorrect. ${loadedQuestions[count].correct_answer} was the answer`);
+    incrementWrongAnswer()
   }
   getNextQuestion();
 }
+
 
 function getNextQuestion() {
   count++;
@@ -99,9 +107,33 @@ function getNextQuestion() {
   if (count < loadedQuestions.length) {
     displayNextQuestion(loadedQuestions);
   } else {
-    alert("finished");
+   
+    console.log(scoreCard)
+    // scoreCard.classList.add("d-none");
+    
+    scoreCard.style.display = "none";
+    // document.getElementsById("incorrect").style.display = "none";
+    // document.getElementsByTagName("p").style.display = "none";
+    // correctScore.classList.add("d-none"); 
+    let incorrectScore = parseInt(document.getElementById("incorrect").innerText)
+    let correctScore = parseInt(document.getElementById("correct").innerText);
+    alert(`Final Score: Correct:${correctScore} Incorrect: ${incorrectScore}`);
+    
+    // document.getElementsByClassName("score-area").style.display = "none";
     window.location = "../index.html/";
   }
+}
+function incrementScore(){
+  //correct score count
+  let oldScore = parseInt(document.getElementById("correct").innerText);
+document.getElementById("correct").innerHTML = ++oldScore
+
+}
+function incrementWrongAnswer(){
+  //incorrect score count
+  let oldScore = parseInt(document.getElementById("incorrect").innerText);
+  document.getElementById("incorrect").innerHTML = ++oldScore
+
 }
 
 
