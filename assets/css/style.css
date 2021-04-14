@@ -27,6 +27,15 @@ h2 {
     color: #ffffff;
     text-align: center;
 }
+.scores {font-size: 3vh;
+font-family: 'Ubuntu Condensed', sans-serif;
+padding: 1%;
+color: #ffffff;
+text-align: center;}
+
+.alert{
+    background-color: red;
+}
 
 #question{
     color: #ffffff;
