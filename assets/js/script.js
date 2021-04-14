@@ -91,7 +91,9 @@ function shuffle(array) {
 
 function checkAnswer() {
   if (this.innerHTML === loadedQuestions[count].correct_answer) {
+    
     alert("correct");
+    
     incrementScore()
   } else {
     alert(`${this.innerHTML} was incorrect. ${loadedQuestions[count].correct_answer} was the answer`);
@@ -118,6 +120,7 @@ function getNextQuestion() {
     let incorrectScore = parseInt(document.getElementById("incorrect").innerText)
     let correctScore = parseInt(document.getElementById("correct").innerText);
     alert(`Final Score: Correct:${correctScore} Incorrect: ${incorrectScore}`);
+    
     
     // document.getElementsByClassName("score-area").style.display = "none";
     window.location = "../index.html/";

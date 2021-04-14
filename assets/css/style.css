@@ -303,6 +303,9 @@ body {
         position: relative;
         top:2vh;
     }
+    #closeModal{
+        display: none;
+    }
     
 
 
