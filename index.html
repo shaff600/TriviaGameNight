@@ -58,19 +58,17 @@
                   <button type="button" class="btn btn-primary btn-block" id="gameInstructions" data-toggle="modal" data-target="#exampleModal">
                     Game Instructions
                   </button>
-                  
-                  
-                  <!-- Modal -->
-                  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h2 class="modal-title" id="exampleModalLabel">Game Instructions</h2>
+                          <h5 class="modal-title" id="exampleModalLabel">Game Instructions</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>
                         </div>
                         <div class="modal-body ">
+                          
                           <h3>How to Play Quiz<i class="fas fa-question"></i> : </h3>
                           <p>Step 1: Select Quiz Category.<br>
                               Step 2: Choose Level of Difficulty. <br>
@@ -80,12 +78,12 @@
                               <p>Step 1: Read Question. <br>
                                  Step 2: Select Answer. <br>
                                  Step 3: Alert Box Will Populate Detailing Correct/Incorrect Answer. <br>
-                                 Step 4: When Quesion Limit is Reached a Final Score Card Will Be Displayed. <br>
+                                 Step 4: When Question Limit is Reached a Final Score Card Will Be Displayed. <br>
                                  Step 5: Redirected to Home Page.
                               </p>
                         </div>
                         <div class="modal-footer ">
-                          
+
                           <button type="button" class="btn btn-primary" id="closeModal" data-dismiss="modal">Close</button>
                         </div>
                       </div>
@@ -122,27 +120,48 @@
         <p class="scores">Correct Answers <i class="fas fa-check-circle">:</i> <span id="correct">0</span> </p>
         <p class="scores">Incorrect Answers <i class="fas fa-times-circle">:</i> <span id="incorrect">0</span></p>
         <button class="btn btn-primary btn-block" id="quitGame" onclick="homepage()">Quit Game</button>
+        <!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="questionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Information</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Next</button>
+      </div>
+    </div>
+  </div>
+</div>
     </div>
       </div>
       </div>
       </div>
     </section>
     <section>
-      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal fade" id="scoreModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+              <h5 class="modal-title" id="exampleModalLongTitle">Score Board</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
+              <div id="score-body"></div>
               
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-primary" onclick="homepage()">Game Menu</button>
             </div>
           </div>
         </div>
@@ -156,8 +175,8 @@
     </div>
     
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" 
-    integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" 
+  integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"

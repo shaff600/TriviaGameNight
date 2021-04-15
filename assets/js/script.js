@@ -63,7 +63,7 @@ function displayNextQuestion() {
 
   let shuffledAnswers = shuffle(answerSelection);
 
-  question.innerHTML = `Question: ${loadedQuestions[count].question}`;
+  question.innerHTML = `Question ${count+1}: ${loadedQuestions[count].question}`;
   options.forEach(function (option, index) {
     option.innerHTML = shuffledAnswers[index];
   });
@@ -92,14 +92,19 @@ function shuffle(array) {
 function checkAnswer() {
   if (this.innerHTML === loadedQuestions[count].correct_answer) {
     
-    alert("correct");
-    
+    // alert("correct");
+    let questionModal = $('#questionModal');
+    questionModal.find('.modal-body').text(`Correct Answer! Wahoo`);
+    questionModal.modal('show'); 
     incrementScore()
   } else {
-    alert(`${this.innerHTML} was incorrect. ${loadedQuestions[count].correct_answer} was the answer`);
     incrementWrongAnswer()
+    let questionModal = $('#questionModal');
+    questionModal.find('.modal-body').text(`${this.innerHTML} was incorrect! The correct answer was ${loadedQuestions[count].correct_answer}`);
+    questionModal.modal('show'); 
+    
   }
-  getNextQuestion();
+  setTimeout(getNextQuestion, 3000)
 }
 
 
@@ -109,22 +114,15 @@ function getNextQuestion() {
   if (count < loadedQuestions.length) {
     displayNextQuestion(loadedQuestions);
   } else {
-   
-    console.log(scoreCard)
-    // scoreCard.classList.add("d-none");
-    // document.getElementsById("incorrect").style.display = "none";
-    // document.getElementsByTagName("p").style.display = "none";
-    // correctScore.classList.add("d-none"); 
     let incorrectScore = parseInt(document.getElementById("incorrect").innerText)
     let correctScore = parseInt(document.getElementById("correct").innerText);
-    alert(`Final Score: Correct:${correctScore} Incorrect: ${incorrectScore}`);
-    
-    
-    // window.location = "https://shaff600.github.io/TriviaGameNight/";
-    // window.location.href = "./index.html";
-    homepage()
+    let scoreModal = $('#scoreModal');
+    scoreModal.find('.modal-body').text(`Correct: ${correctScore} Incorrect: ${incorrectScore}`);
+    scoreModal.modal('show'); 
   }
+ 
 }
+  
 function incrementScore(){
   //correct score count
   let oldScore = parseInt(document.getElementById("correct").innerText);
