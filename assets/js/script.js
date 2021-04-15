@@ -112,8 +112,6 @@ function getNextQuestion() {
    
     console.log(scoreCard)
     // scoreCard.classList.add("d-none");
-    
-    scoreCard.style.display = "none";
     // document.getElementsById("incorrect").style.display = "none";
     // document.getElementsByTagName("p").style.display = "none";
     // correctScore.classList.add("d-none"); 
@@ -122,8 +120,9 @@ function getNextQuestion() {
     alert(`Final Score: Correct:${correctScore} Incorrect: ${incorrectScore}`);
     
     
-    // document.getElementsByClassName("score-area").style.display = "none";
-    window.location = "../index.html/";
+    // window.location = "https://shaff600.github.io/TriviaGameNight/";
+    // window.location.href = "./index.html";
+    homepage()
   }
 }
 function incrementScore(){
@@ -138,5 +137,7 @@ function incrementWrongAnswer(){
   document.getElementById("incorrect").innerHTML = ++oldScore
 
 }
+function homepage(){
+  window.location = "https://shaff600.github.io/TriviaGameNight/";
 
-
+}
