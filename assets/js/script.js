@@ -9,7 +9,7 @@ const question = document.querySelector("#question");
 // let correctScore = document.getElementById("correct")
 // let incorrectScore = document.getElementById("incorrect")
 // let scores = document.getElementsByClassName("score-area")
-let scoreCard = document.getElementById("score-card")
+let scoreCard = document.getElementById("score-card");
 let api_link = "https://opentdb.com/";
 let quantity;
 let difficulty;
@@ -96,15 +96,15 @@ function checkAnswer() {
     let questionModal = $('#questionModal');
     questionModal.find('.modal-body').text(`Correct Answer! Wahoo`);
     questionModal.modal('show'); 
-    incrementScore()
+    incrementScore();
   } else {
-    incrementWrongAnswer()
+    incrementWrongAnswer();
     let questionModal = $('#questionModal');
     questionModal.find('.modal-body').text(`${this.innerHTML} was incorrect! The correct answer was ${loadedQuestions[count].correct_answer}`);
     questionModal.modal('show'); 
     
   }
-  setTimeout(getNextQuestion, 3000)
+  setTimeout(getNextQuestion, 3000);
 }
 
 
@@ -114,7 +114,7 @@ function getNextQuestion() {
   if (count < loadedQuestions.length) {
     displayNextQuestion(loadedQuestions);
   } else {
-    let incorrectScore = parseInt(document.getElementById("incorrect").innerText)
+    let incorrectScore = parseInt(document.getElementById("incorrect").innerText);
     let correctScore = parseInt(document.getElementById("correct").innerText);
     let scoreModal = $('#scoreModal');
     scoreModal.find('.modal-body').text(`Correct: ${correctScore} Incorrect: ${incorrectScore}`);
@@ -126,13 +126,13 @@ function getNextQuestion() {
 function incrementScore(){
   //correct score count
   let oldScore = parseInt(document.getElementById("correct").innerText);
-document.getElementById("correct").innerHTML = ++oldScore
+document.getElementById("correct").innerHTML = ++oldScore;
 
 }
 function incrementWrongAnswer(){
   //incorrect score count
   let oldScore = parseInt(document.getElementById("incorrect").innerText);
-  document.getElementById("incorrect").innerHTML = ++oldScore
+  document.getElementById("incorrect").innerHTML = ++oldScore;
 
 }
 function homepage(){
