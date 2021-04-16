@@ -126,7 +126,7 @@ body {
 .card {
     width: 70vw;
     height: 55vh;
-    box-sizing: 0px 0px 1px #ccc;
+    /* box-sizing: 0px 0px 1px #ccc; */
     position: relative;
     margin: 0px auto;
     opacity: 1;
@@ -136,8 +136,6 @@ body {
   }
 .card::before{
     content: "";
-    width: relative;
-    height: relative;
     background: inherit; 
     position: absolute;
     left: -25px;  
@@ -153,7 +151,7 @@ body {
 .card2 {
   width: 70vw;
     height: 70vh;
-    box-sizing: 0px 0px 1px #ccc;
+    /* box-sizing: 0px 0px 1px #ccc; */
     position: relative;
     margin: 0px auto;
     opacity: 1;
@@ -163,8 +161,6 @@ body {
   }
 .card2::before{
     content: "";
-    width: relative;
-    height: relative;
     background: inherit; 
     position: absolute;
     left: -25px;  
@@ -175,9 +171,7 @@ body {
     filter: blur(10px);
      overflow: hidden
 }
-.box2{
-    /* margin-top:10rem */
-}
+
 .btn-primary {
     background-color: #800080;
     border-color: #ffffff;
@@ -285,7 +279,7 @@ body {
     }
     #submitOptions{
         position: relative;
-        top:3svh;
+        top:3vh;
     }
     
     #gameInstructions{
@@ -350,7 +344,6 @@ body {
 
     .card {
         width: 80%;
-        box-sizing: 0px 0px 1px #ccc;
         position: relative;
         margin: 0px auto;
         opacity: 1;
