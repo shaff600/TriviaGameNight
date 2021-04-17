@@ -94,13 +94,13 @@ function checkAnswer() {
     
     // alert("correct");
     let questionModal = $('#questionModal');
-    questionModal.find('.modal-body').text(`Correct Answer! Wahoo`);
+    questionModal.find('.modal-body').text(`Question ${count+1}: Correct Answer! Wahoo`);
     questionModal.modal('show'); 
     incrementScore();
   } else {
     incrementWrongAnswer();
     let questionModal = $('#questionModal');
-    questionModal.find('.modal-body').text(`${this.innerHTML} was incorrect! The correct answer was ${loadedQuestions[count].correct_answer}`);
+    questionModal.find('.modal-body').text(`Question ${count+1}: ${this.innerHTML} was incorrect! The correct answer was ${loadedQuestions[count].correct_answer}`);
     questionModal.modal('show'); 
     
   }
@@ -118,6 +118,9 @@ function getNextQuestion() {
     let correctScore = parseInt(document.getElementById("correct").innerText);
     let scoreModal = $('#scoreModal');
     scoreModal.find('.modal-body').text(`Correct: ${correctScore} Incorrect: ${incorrectScore}`);
+    
+
+    
     scoreModal.modal('show'); 
   }
  
