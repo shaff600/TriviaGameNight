@@ -1,10 +1,11 @@
 
-<h1 align="center">Trivia Night Game</h1>
-	- This project is based of the Trivia API in order to test users knolwedge and learn something new. 
+
+<h1 align="center">Trivia Game Night</h1>
+	- This project is based of the Trivia Open DB.
 	
 # Table of Contents
 
-* [Purpose](#User-Experience(UX))
+* [Purpose](#purpose)
 *  [User Experience](#user-experience-ux)
 * [Features](#features )
 *  [Technologies Used](#technologies-used)
@@ -15,30 +16,52 @@
 * [Deployment](#deployment)
 * [Credits](#credits)
 
-## User Experience (UX)
+## Purpose 
+- A Trivia quiz contains questions about interesting but unimportant questions across many topics. A Trivia Quiz is usually held within social areas such as pub's and bingo halls. This quiz has been desinged to bring the same interesting but unimportant questions. The development of this project is for users who would like to test their knowledge across different topics. 
 
--   ### User stories
+# User Experience (UX)
+## Stratergy: 
+This project was developed for users to challange their knowledge in an interactive way. The quizzes importance lies in the fact that it is appropriate for people of all ages and has a wide range of categories to satisfy any user. It also has a range of difficulty levels for those who are more experienced and want to push themselves, as well as, having easier quiz questions for topics you've not delved into before.
 
-    -   As a user, I would like to select a a category that I'm intrested in
-    -  As a user, I would like to select the number of questions that I want 
-    -  As a user, I would like to adjust the difficulty based on my knoweldge of the selected category
-    - Once game has started, I would like each question to be different 
-	 - Upon selecting an answer I would like to know if I was correct/incorrect
-	 - Whilst participating in the game, I would like to know how many questions remained to be answered
+The project is based of the [Open Trivia Database](https://opentdb.com/) which essentially is a free to use, user-contributed trivia question database. The Open Trivia Database provides a completely free JSON API to use in programming projects. The use of this API does not require a API Key.
+
+The objective is to provide users with a fun, interactive trivia game based on their favourite categories. Although the game is appropriate for people of all ages, the interface must be visually pleasing in order to boost user engagement and acceptability across different age groups
+
+-	### User stories
+	- As a user, I would like to read insturctions for the quiz
+	-   As a user, I would like to select a a topic that I'm intersted in
+	-  As a user, I would like to select the number of questions that I want 
+	-   As an user, I'd like some control over the quiz difficulty level
+	- Once game has started, I would like each question to be different 
+	- Upon selecting an answer I would like to know if I was correct/incorrect
 	- At the end of the game, I would like to know my score and given the option to return to game menu page	
--   ### Design
-    -   #### Colour Scheme
-        -   Neon theamed
-    -   #### Typography
-       -   Arcade game styled fonts
-    -   #### Imagery 
-        -   SVG live background or a neon theamed background image
+	- As a user, I'd like to be able to play the game on various screen sizes.
+	
+## Scope:
+The quiz pulls data from the Trivia DB using an API. As the API provides over 20 quiz categories, I've amended the list to include a 9 popular topics. There where two options for the formatting the quiz, multiple choice or true/false. I decided to go with multiple choice as I believe it would be more of a viable project to do as there is more development needed. The API can generate a maximum of 50 questions for a given category, I have limited the volume of questions to either 5, 10 and 15.
 
-*   ### Wireframes
-    -   Home Page Wireframe - [View](https://github.com/)
-    -   Quiz Page Wireframe - [View](https://github.com/)
-    -   Answer Pop Up Wireframe - [View](https://github.com/)
-    -  End Game Pop Up Wireframe - [View](https://github.com/)
+## Structure:
+The **First Section-** Contains the , 3 dropdown options **Category**, **Difficulty** and **Number of questions** and two buttons, one to start the game and another detailing instructions.
+The **Second Section-** Contains the questions and potential answers, that are pulled from the API,  section detailing incorrect/correct answers and a quit button.  
+The **Third Section-** Contains the Game Over modal, that will display the user's total score and a home button.
+## Skeleton:
+ Prior to the development of the project I scetched out in Balsamiq Wireframes to provide an inital idea of how I would display content. My inital wireframe included a timer and progress bar of which I did not implement. The reason for this is that I decided to either display incorrect/correct answers as  values rather then implmenting a visual bar to display progress. A timer was not included due to time limitations, however this is something I have included in [Future Development](#future-development). Find below PDF copies of wireframes below
+   -   Pre-development Wireframe - [View](https://github.com/shaff600/TriviaGameNight/blob/master/assets/docs/MS2.pdf)
+    -   Post-development Wireframe - [View](https://github.com/shaff600/TriviaGameNight/blob/master/assets/docs/MS2_wireframe%202.pdf)
+ ## Surface:
+My initial thoughts when designing the surface of the website was to theme the quiz to match an arcade type game. This meant including live backgrounds, funky fonts and a qwerky color scheme. Here is show i went about acheiving this: 
+### Live background - [Loading.io](https://loading.io/background/m-interstellar/)
+-	The live background was implemented into the site by using an SVG file. By including this, the website can be seen as being an arcade themed as the background is popular for 80's arcade games. 
+### Custom Font - [Font Space](https://www.fontspace.com/rapier-zero-font-f18156)
+- To suit the 80's arcade theme, i believe this font provides a "loud" styling which suits the theme of the quiz.
+### Font Glow - [Code Pen](https://codepen.io/AllThingsSmitty/pen/VzXrgY)
+- To exaggerate the "loud" styling, I have also included a glow to the font. the above snippet was used to implement this effect
+
+### Colour Palette - [Coolors Palette](https://coolors.co/ffffff-800080-000000)
+-	Prior to applying a colour scheme to the project, I created a palette on the above site to figure out if the colours will work together.
+<img width="903" alt="palette" src="assets/docs/palette.png">
+
+
 
 ## Features
 
@@ -75,42 +98,60 @@
 1. [Balsamiq:](https://balsamiq.com/)
     - Balsamiq was used to create the [wireframes](https://github.com/) during the design process.
 
-## Testing
+# Testing
 
 The W3C Markup Validator and W3C CSS Validator Services and JSLint were used to validate every page of the project to ensure there were no syntax errors in the project.
+	
+- [W3C HTML Validator](https://validator.w3.org/)
+- When running my index.html file through the validator there where 4 errors which where outputted. As seen here:
+<img width="903" src="assets/docs/before_validatorHTML.png">
+	-	Fix: There where two  error/warning relating to duplication of ID's. This was rectified by removing the ID's entirely. Furthermore, the "aria-labelledby" was removed as it is not needed. Both issues where caused by inserting code from the Bootstrap Docs and not removing elements that aren't needed. 
+<img width="903" src="assets/docs/after_validatorHTML.png">
+-	 [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+	-	The validator produced 8 errors, 7 are related to the transparent background and 1 is related to a typo. Error's can be seen here: 
+<img width="903" src="assets/docs/before_validatorCSS.png">
+		-	Fix: I've removed th values that was causing issues. The transparency background was developed using a tutorial that was found on YouTube. Similarly to the HTML errors, I was inserting unnecessary code that was not needed.
+<img width="903" src="assets/docs/after_validatorCSS.png">
+-	[JSLint](https://jshint.com/)
+-	JSLint is a static code analysis tool used in software development for checking if JavaScript source code complies with coding rules. 
+	<img src="assets/docs/result_JSLint.png">
+	-	Fix: The JS warning indicate that there 7 semicolon's missing missing from the JS file. I was able to navigate to the warnings and place semicolon's appropriately.
+-	[Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools)
+	-	I have used  DevTools test the styling and responsiveness of the website on the different devices-Mobile, Tablet and Desktop.
+-	[ResponsivelyApp](https://responsively.app/) 
+	-	This desktop application was used to preview all target screens in a single window side-by-side. I found this to be very usefull as I dont have to navigate through different devices to view responsiveness. 
+	<img width="903" src="assets/docs/ResponsivelyApp.png">
+	
 
+## Testing User Stories from User Experience (UX) Section
 
-### Testing User Stories from User Experience (UX) Section
+1. As a user, I would like to read insturctions for the quiz
+		- User can select "Game Instructions" and view instructions.
+2. As a user, I would like to select a a topic that I'm intersted in
+		- Under "Select Category" the user can select 7 different quiz topics.	
+		- When starting quiz, question topics are correct.
+3.  As a user, I would like to select the number of questions that I want 
+		- The user can select either 5, 10 or 15 from drop down menu.
+		- The API generates the specified volume of questions. 	
+4.  As an user, I'd like some control over the quiz difficulty level
+		- Under "Select Difficulty" the user can select easy, medium or hard.
+		- API generates appropriate difficulty for question level selected.
+5. Once game has started, I would like each question to be different 
+		- No duplicates where populated at time of testing.
+6. Upon selecting an answer I would like to know if I was correct/incorrect
+		- When user selects an answer a modal is populated informing of correct/incorrect  answer.
+7.  At the end of the game, I would like to know my score and given the option to return to game menu page	
+	- User is promoted a total amount of correct/incorrect answers when quantity of questions is reached.
+8. As a user, I'd like to be able to play the game on various screen sizes.
+	- User can navigate and interact with quiz on all popular devices.
 
--   #### First Time Visitor Goals
+    ## Manual Testing 
+    ### API Data - Category 
+    <img width="903" src="assets/docs/API_Category.png">
 
-    1. As a First Time Visitor, I want to easily understand the main purpose of the site.
+### API Data - Difficulty
 
-        1. Upon entering the site, users are automatically greeted with a clean and easily readable title of the game type, Trivia.
-        2. Help Button to detail how to play the game
-        
-    2. As a First Time Visitor, I want to be able to easily be able to navigate throughout the settings of the Trivia Game.
-    
-        1. The site will provide drop down options for game settings
-        2. Once preffrences are selected, "Start Quiz" button to begin game.
-    
--   #### Returning Visitor Goals
-
-    1. As a Returning Visitor, I want to test my knowledge on another category .
-
-        1. Select a different category from drop down option
-        2. Once preffrences are selected, "Start Quiz" button to begin a new game based on a different category.
-
-    
--   #### Frequent User Goals
-
-    1. As a Frequent User, I want to improve quiz score.
-
-        1. The user would want to beat previous quiz score.
-
-    
-
-
+### API Data - Number of Question 
 
 ### Issues Faced
 
@@ -161,7 +202,7 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 > remote: Counting objects: 10, done.
 > remote: Compressing objects: 100% (8/8), done.
 > remove: Total 10 (delta 1), reused 10 (delta 1)
-> Unpacking objects: 100% (10/10), done.
+> Unpacking objects: 100% (10/10), done .
 ```
 
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
