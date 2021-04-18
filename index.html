@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Trivia Night</title>
+    <title>Trivia Game Night</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="assets/images/favicon.ico" />
@@ -13,50 +13,48 @@
   </head>
   <body>
     <div class="container col-sm-12">
-      <h1 class="neon">Trivia Game Night</h1>
-      <div class="card"  id="remove"> 
-        <div class="box">
-          <div class="content">
-            
-            <!--Select Quiz Options-->
-            <section class="container" id="gameOptions">
-              <div class="row">
-                <div class="col-sm-12 col-md-12 dropdownSelect">
-                  <h2>Select Category</h2>
-                  <select class="custom-select" id="category">
-                    <option value="9">General Knowledge</option>
-                    <option value="11">Films</option>
-                    <option value="12">Music</option>
-                    <!-- <option value="26">Celebrities</option> -->
-                    <option value="18">Tech</option>
-                     <option value="15">Video Games</option>
-                    <option value="22">Geography</option>
-                    <option value="17">Science & Nature</option>
-                     <option value="28">Vehicles</option>
-                    <option value="21">Sports</option>
-
-                  </select>
-                  
-                </div>
-                <div class="col-sm-12 col-md-12 dropdownSelect">
-                  <h2>Select Difficulty</h2>
-                  <select class="custom-select" id="difficultySelect">
-                    <option value="easy">Easy</option>
-                    <option value="medium">Medium</option>
-                    <option value="hard">Hard</option>
-                  </select>
-                </div>
-                <div class="col-sm-12 col-md-12 col-xl-12 dropdownSelect">
-                  <h2>How Many Questions?</h2>
-                  <select class="custom-select" id="quantityQuestion">
-                    <option value="5">5</option>
-                    <option value="10">10</option>
-                    <option value="15">15</option>
-                  </select>
-                  <div class="col-sm-12">
+    <h1 class="neon">Trivia Game Night</h1>
+    <div class="card"  id="remove">
+      <div class="box">
+        <div class="content">
+          <!--Select Quiz Options-->
+          <section class="container" id="gameOptions">
+            <div class="row">
+              <div class="col-sm-12 col-md-12 dropdownSelect">
+                <h2>Select Category</h2>
+                <select class="custom-select" id="category">
+                  <option value="9">General Knowledge</option>
+                  <option value="11">Films</option>
+                  <option value="12">Music</option>
+                  <!-- <option value="26">Celebrities</option> -->
+                  <option value="18">Tech</option>
+                  <option value="15">Video Games</option>
+                  <option value="22">Geography</option>
+                  <option value="17">Science & Nature</option>
+                  <option value="28">Vehicles</option>
+                  <option value="21">Sports</option>
+                </select>
+              </div>
+              <div class="col-sm-12 col-md-12 dropdownSelect">
+                <h2>Select Difficulty</h2>
+                <select class="custom-select" id="difficultySelect">
+                  <option value="easy">Easy</option>
+                  <option value="medium">Medium</option>
+                  <option value="hard">Hard</option>
+                </select>
+              </div>
+              <div class="col-sm-12 col-md-12 col-xl-12 dropdownSelect">
+                <h2>How Many Questions?</h2>
+                <select class="custom-select" id="quantityQuestion">
+                  <option value="5">5</option>
+                  <option value="10">10</option>
+                  <option value="15">15</option>
+                </select>
+                <div class="col-sm-12">
                   <button type="button" class="btn btn-primary btn-block" id="submitOptions">Start Quiz! </button>
                   <button type="button" class="btn btn-primary btn-block" id="gameInstructions" data-toggle="modal" data-target="#exampleModal">
                     Game Instructions
+                    <!-- Instructions Modal  -->
                   </button>
                   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
@@ -64,101 +62,99 @@
                         <div class="modal-header">
                           <h5 class="modal-title" id="exampleModalLabel">Game Instructions</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
+                          <span aria-hidden="true">&times;</span>
                           </button>
                         </div>
                         <div class="modal-body ">
-                          
                           <h3>How to Play Quiz<i class="fas fa-question"></i> : </h3>
                           <p>Step 1: Select Quiz Category.<br>
-                              Step 2: Choose Level of Difficulty. <br>
-                              Step 3: Pick Quantity of Questions. <br>
-                              Step 4: Start Quiz!</p>
-                              <h3>In Game Instructions <i class="fas fa-scroll"></i>:</h3>
-                              <p>Step 1: Read Question. <br>
-                                 Step 2: Select Answer. <br>
-                                 Step 3: Alert Box Will Populate Detailing Correct/Incorrect Answer. <br>
-                                 Step 4: When Question Limit is Reached a Final Score Card Will Be Displayed. <br>
-                                 Step 5: Redirected to Home Page.
-                              </p>
+                            Step 2: Choose Level of Difficulty. <br>
+                            Step 3: Pick Quantity of Questions. <br>
+                            Step 4: Start Quiz!
+                          </p>
+                          <h3>In Game Instructions <i class="fas fa-scroll"></i>:</h3>
+                          <p>Step 1: Read Question. <br>
+                            Step 2: Select Answer. <br>
+                            Step 3: Alert Box Will Populate Detailing Correct/Incorrect Answer. <br>
+                            Step 4: Next Question Will Load within 3 Seconds
+                            Step 5: When Question Limit is Reached a Final Score Card Will Be Displayed. <br>
+                            Step 6: Redirected to Home Page.
+                          </p>
                         </div>
                         <div class="modal-footer ">
-
                           <button type="button" class="btn btn-primary" id="closeModal" data-dismiss="modal">Close</button>
                         </div>
                       </div>
                     </div>
                   </div>
-                   </div>
                 </div>
               </div>
-            
-            </section>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <!-- game screen -->
+    <section class="container d-none container col-sm-12" id="game">
+      <div class="card2">
+        <div class="box2">
+          <div class="row gamescreen">
+            <div id="question" class="container-fluid"></div>
+            <div class="col-sm-12 col-md-6 answer-options" id="q1">
+              <p class="answerChoice" data-number="1"></p>
+            </div>
+            <div class="col-sm-12 col-md-6 answer-options" id="q2">
+              <p class="answerChoice" data-number="2"></p>
+            </div>
+            <div class="col-sm-12 col-md-6 answer-options" id="q3">
+              <p class="answerChoice" data-number="3"></p>
+            </div>
+            <div class="col-sm-12 col-md-6 answer-options" id="q4">
+              <p class="answerChoice" data-number="4" ></p>
+            </div>
+          </div>
+          <div class="col-sm-12 ">
+            <div class="score-area" id="score-card">
+              <p class="scores">Correct Answers <i class="fas fa-check-circle">:</i> <span id="correct">0</span> </p>
+              <p class="scores">Incorrect Answers <i class="fas fa-times-circle">:</i> <span id="incorrect">0</span></p>
+              <button class="btn btn-primary btn-block" id="quitGame" onclick="homepage()">Quit Game</button>
+              <!-- Button trigger modal -->
+              <!-- Modal for answer selection -->
+              <div class="modal fade" id="questionModal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Information</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" data-dismiss="modal" id="nextQuestion">Next</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-<section class="container d-none container col-sm-12" id="game">
-    <div class="card2"> 
-    <div class="box2"> 
-      <div class="row gamescreen"> 
-        <div id="question" class="container-fluid"></div>
-        <div class="col-sm-12 col-md-6 answer-options" id="q1">
-          <p class="answerChoice" data-number="1"></p>
-        </div>
-        <div class="col-sm-12 col-md-6 answer-options" id="q2">
-          <p class="answerChoice" data-number="2"></p>
-        </div>
-        <div class="col-sm-12 col-md-6 answer-options" id="q3">
-          <p class="answerChoice" data-number="3"></p>
-        </div>
-        <div class="col-sm-12 col-md-6 answer-options" id="q4">
-          <p class="answerChoice" data-number="4" ></p>
-        </div>
-      </div>
-      <div class="col-sm-12 ">
-         <div class="score-area" id="score-card">
-        <p class="scores">Correct Answers <i class="fas fa-check-circle">:</i> <span id="correct">0</span> </p>
-        <p class="scores">Incorrect Answers <i class="fas fa-times-circle">:</i> <span id="incorrect">0</span></p>
-        <button class="btn btn-primary btn-block" id="quitGame" onclick="homepage()">Quit Game</button>
-        <!-- Button trigger modal -->
-
-<!-- Modal -->
-<div class="modal fade" id="questionModal" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Information</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Next</button>
-      </div>
-    </div>
-  </div>
-</div>
-    </div>
-      </div>
-      </div>
-      </div>
     </section>
     <section>
+      <!-- final score modal -->
       <div class="modal fade" id="scoreModal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" >Score Board</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
+              <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
               <div id="score-body"></div>
-              
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-primary" onclick="homepage()">Game Menu</button>
@@ -167,16 +163,8 @@
         </div>
       </div>
     </section>
-
-
-         
-      
-    
-    
-    
-    
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" 
-  integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" 
+      integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
