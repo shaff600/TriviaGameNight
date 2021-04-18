@@ -6,9 +6,6 @@ const submitQuiz = document.getElementById("submitOptions");
 const remove = document.getElementById("remove");
 const options = document.querySelectorAll(".answer-options"); 
 const question = document.querySelector("#question"); 
-// let correctScore = document.getElementById("correct")
-// let incorrectScore = document.getElementById("incorrect")
-// let scores = document.getElementsByClassName("score-area")
 let scoreCard = document.getElementById("score-card");
 let api_link = "https://opentdb.com/";
 let quantity;
@@ -54,8 +51,6 @@ function getQuestions(gameOption, difficulty, quantity) {
     });
 }
 function displayNextQuestion() {
-  // console.log("error here", loadedQuestions);
-  // const correctAnswer = loadedQuestions[count].correct_answer;
   let answerSelection = [
     ...loadedQuestions[count].incorrect_answers,
     loadedQuestions[count].correct_answer,
